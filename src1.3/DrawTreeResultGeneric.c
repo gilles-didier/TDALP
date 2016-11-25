@@ -1,25 +1,3 @@
-/*
-    'tdalp' computes the time-dependent-asymmetric-linear-parsimony parametric reconstruction of a phylogenetic tree.
-
-    Copyright (C) 2016  Gilles DIDIER
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-
-
-
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -30,7 +8,7 @@
 #include "Utils.h"
 #include "DrawTreeResultGeneric.h"
 
-#define NB_MIN 6
+#define NB_MIN 4
 #define OFFSET 10
 #define TICK_LENGTH 10
 #define FONT_NAME "Helvetica"
@@ -172,7 +150,8 @@ void drawTreeResultFileGeneric(char *filename, TypeTree *tree, TypeResult *r, Ty
 	info->param.scale = (info->param.width-info->param.labelWidth-info->param.xoffset-info->param.labelSep)/((info->param.tmax-info->param.tmin));
 	drawTreeGeneric(tree, r, info);
 	drawScaleGeneric(info->param.xoffset, info->param.leafSep*(countLeaves(tree)+1), info);
-	drawScaleVPst(info->param.xoffset+info->param.width-info->param.labelWidth-info->param.labelSep, info->param.leafSep*(countLeaves(tree)+1), info->param.labelWidth, info);
+	drawScaleVPst(info->param.width/4, info->param.leafSep*(countLeaves(tree)+2.1), info->param.width/2, info);
+//	drawScaleVPst(info->param.xoffset+info->param.width-info->param.labelWidth-info->param.labelSep, info->param.leafSep*(countLeaves(tree)+1), info->param.labelWidth, info);
 	info->funct.end(&(info->param));
 	free((void*) tree->time);
 	tree->time = timeSave;
