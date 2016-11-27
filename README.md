@@ -25,7 +25,7 @@ will output two files:
 	'<node ident>'	1.0 >1./3.< 2.0 >2./3.< 3.0 >3./2.< 4.0
 	which means that for an asymmetry parameter between 0 and 1./3., the state reconstructed for the node <node ident> is 1.0. It is 2.0 for an asymmetry parameter between 1./3. and 2./3., 3.0 for an asymmetry parameter between 2./3. and 3./2., and 4.0 for an asymmetry parameter greater than 3./2.
 
-	'example_out.pdf': is a pdf documentresulting for option '-f 1' and displaying the parametric reconstruction 'example_tree.newick'/'example_states.csv'
+	'example_out.pdf': is a pdf document resulting from option '-f 1' and displaying the parametric reconstruction 'example_tree.newick'/'example_states.csv'
 
 A complete description of the options allowed is given below.
 
