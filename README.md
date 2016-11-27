@@ -75,8 +75,8 @@ DESCRIPTION
 			-> a series of lines '<name of the node> <state value>'
 	-t <type>
 		set the function applied on the branch length of the tree: 
-			-t i -> inverse
-			-t u -> identity
+			-t i -> f(t) = 1/t
+			-t u -> f(t) = 1
 	-f <number>
 		set the graphic format of the output (option is required if on wants a graphic output)
 			-f 1 -> pdf
